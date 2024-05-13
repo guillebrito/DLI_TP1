@@ -9,14 +9,15 @@
 ```bash
 
 # Design analysis of the sources and testbenches
-$ ghdl -a --workdir=./work --std=08 ./src/template.vhdl
-$ ghdl -a --workdir=./work --std=08 ./src/tb_template.vhdl
+ghdl -a --workdir=./work --std=08 ./src/conta.vhd
+ghdl -a --workdir=./work --std=08 ./src/problema2.vhd
+ghdl -a --workdir=./work --std=08 ./src/tb_problema2.vhd
 
 # Test units elaboration
-$ ghdl -e --workdir=./work --std=08 tb_template
+ghdl -e --workdir=./work --std=08 tb_problema2
 
 # Execute the simulation and export the waveforms
-$ ghdl -r --workdir=./work --std=08 tb_template --vcd=./waves/tb_template.vcd --wave=./waves/tb_template.ghw --stop-time=100ns
+ghdl -r --workdir=./work --std=08 tb_problema2 --vcd=./waves/tb_problema2.vcd --stop-time=1us
 
 ```
 
@@ -30,9 +31,8 @@ $ ghdl -r --workdir=./work --std=08 tb_template --vcd=./waves/tb_template.vcd --
 
 ```bash 
 
-# template
-$ gtkwave ./waves/tb_template.ghw
-$ gtkwave ./waves/tb_template.vcd
+# problema2
+gtkwave ./waves/tb_problema2.vcd
 
 ```
 # Makefile
