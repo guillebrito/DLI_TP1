@@ -1,6 +1,6 @@
-# Simulations
+# Simulación
 
-## Requirements
+## Requisitos
 
 - [GHDL](http://ghdl.free.fr/)
 
@@ -8,33 +8,30 @@
 
 ```bash
 
-# Design analysis of the sources
-$ ghdl -a --workdir=./work --std=08 ./src/template.vhdl
-
-# Design analysis of the testbenches
-$ ghdl -a --workdir=./work --std=08 ./src/tb_template.vhdl
+# Design analysis of the sources and testbenches
+$ ghdl -a --workdir=./work --std=08 ./src/problema1.vhd
+$ ghdl -a --workdir=./work --std=08 ./src/tb_problema1.vhd
 
 # Test units elaboration
-$ ghdl -e --workdir=./work --std=08 tb_template
+$ ghdl -e --workdir=./work --std=08 tb_problema1
 
 # Execute the simulation and export the waveforms
-$ ghdl -r --workdir=./work --std=08 tb_template --vcd=./waves/tb_template.vcd --wave=./waves/tb_template.ghw --stop-time=100ns
+$ ghdl -r --workdir=./work --std=08 tb_problema1 --vcd=./waves/tb_problema1.vcd --stop-time=100ns
 
 ```
 
-# Waveforms
+# Formas de onda
 
-## Requirements
+## Requisitos
 
 - [GTKWave](http://gtkwave.sourceforge.net/)
 
-## Procedures
+## Procedimiento
 
 ```bash 
 
-# template
-$ gtkwave ./waves/tb_template.ghw
-$ gtkwave ./waves/tb_template.vcd
+# problema1
+$ gtkwave ./waves/tb_problema1.vcd
 
 ```
 # Makefile
