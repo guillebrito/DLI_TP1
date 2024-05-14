@@ -9,14 +9,15 @@
 ```bash
 
 # Design analysis of the sources and testbenches
-$ ghdl -a --workdir=./work --std=08 ./src/template.vhdl
-$ ghdl -a --workdir=./work --std=08 ./src/tb_template.vhdl
+ghdl -a --workdir=./work --std=08 ./src/display_7seg.vhd
+ghdl -a --workdir=./work --std=08 ./src/problema3.vhd
+ghdl -a --workdir=./work --std=08 ./src/tb_problema3.vhd
 
 # Test units elaboration
-$ ghdl -e --workdir=./work --std=08 tb_template
+ghdl -e --workdir=./work --std=08 tb_problema3
 
 # Execute the simulation and export the waveforms
-$ ghdl -r --workdir=./work --std=08 tb_template --vcd=./waves/tb_template.vcd --wave=./waves/tb_template.ghw --stop-time=100ns
+ghdl -r --workdir=./work --std=08 tb_problema3 --vcd=./waves/tb_problema3.vcd --stop-time=100ns
 
 ```
 
@@ -30,18 +31,17 @@ $ ghdl -r --workdir=./work --std=08 tb_template --vcd=./waves/tb_template.vcd --
 
 ```bash 
 
-# template
-$ gtkwave ./waves/tb_template.ghw
-$ gtkwave ./waves/tb_template.vcd
+# problema3
+gtkwave ./waves/tb_problema3.vcd
 
 ```
 # Makefile
 
-Este Makefile está diseñado para compilar, simular y generar formas de onda para un diseño VHDL. Aquí está una explicación de las diferentes partes del Makefile y su procesamiento:
+Este Makefile está diseñado para compilar, simular y generar formas de onda para un diseño VHD. Aquí está una explicación de las diferentes partes del Makefile y su procesamiento:
 
 - **Definición de variables:**
     
-    - `SOURCES`: Esta variable contiene la lista de archivos fuente VHDL habilitados. Por defecto, todos los archivos `.vhd` y `.vhdl` en el directorio especificado por `$(SOURCES_DIR)` están habilitados.
+    - `SOURCES`: Esta variable contiene la lista de archivos fuente VHD habilitados. Por defecto, todos los archivos `.vhd` y `.vhd` en el directorio especificado por `$(SOURCES_DIR)` están habilitados.
 - **Inclusión del archivo de configuración:**
     
     - `CONFIG`: Especifica el archivo de configuración `Config.makefile` a incluir. Este archivo puede contener variables y configuraciones específicas del proyecto.
@@ -70,4 +70,4 @@ Este Makefile está diseñado para compilar, simular y generar formas de onda pa
     
     - `$(WORK_DIR)/$(WORK)-obj$(STD).cf`: Archivo generado como resultado de la importación y elaboración del diseño.
 
-Este Makefile automatiza el proceso de compilación, simulación y generación de formas de onda para un diseño VHDL utilizando GHDL. Proporciona tareas para realizar cada paso del flujo de diseño, desde la verificación de la sintaxis hasta la simulación del diseño elaborado. Además, permite la configuración y personalización del proceso a través del archivo de configuración `Config.makefile`.
+Este Makefile automatiza el proceso de compilación, simulación y generación de formas de onda para un diseño VHD utilizando GHDL. Proporciona tareas para realizar cada paso del flujo de diseño, desde la verificación de la sintaxis hasta la simulación del diseño elaborado. Además, permite la configuración y personalización del proceso a través del archivo de configuración `Config.makefile`.

@@ -1,0 +1,139 @@
+$date
+  Mon May 13 20:58:38 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module textio $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module tb_problema3 $end
+$var reg 1 ! ina $end
+$var reg 1 " inb $end
+$var reg 1 # inc $end
+$var reg 1 $ ind $end
+$var reg 7 % salida[6:0] $end
+$scope module uut $end
+$var reg 1 & a $end
+$var reg 1 ' b $end
+$var reg 1 ( c $end
+$var reg 1 ) d $end
+$var reg 7 * display[6:0] $end
+$var integer 32 + aa $end
+$var integer 32 , bb $end
+$var integer 32 - cc $end
+$var integer 32 . dd $end
+$var integer 32 / votos $end
+$var reg 7 0 aprobado[6:0] $end
+$var reg 7 1 desaprobado[6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+1!
+0"
+0#
+1$
+b1110111 %
+1&
+0'
+0(
+1)
+b1110111 *
+b1010 +
+b0 ,
+b0 -
+b101101 .
+b0 /
+b1110111 0
+b0111101 1
+#10000000
+0!
+1"
+0&
+1'
+b1110111 *
+b0 +
+b1111 ,
+#20000000
+1!
+1#
+0$
+1&
+1(
+0)
+b1110111 *
+b1010 +
+b11110 -
+b0 .
+#30000000
+0#
+b0111101 %
+0(
+b0111101 *
+b0 -
+#40000000
+0"
+1#
+0'
+1(
+b0 ,
+b11110 -
+#50000000
+0#
+1$
+b1110111 %
+0(
+1)
+b1110111 *
+b0 -
+b101101 .
+#60000000
+0!
+1"
+0&
+1'
+b1110111 *
+b0 +
+b1111 ,
+#70000000
+1!
+1#
+0$
+1&
+1(
+0)
+b1110111 *
+b1010 +
+b11110 -
+b0 .
+#80000000
+0#
+b0111101 %
+0(
+b0111101 *
+b0 -
+#90000000
+0"
+1#
+0'
+1(
+b0 ,
+b11110 -
+#100000000
+0#
+1$
+b1110111 %
+0(
+1)
+b1110111 *
+b0 -
+b101101 .
