@@ -1,10 +1,12 @@
-# Simulación
+# Diseño Lógico - TP1 - Problema 3
 
-## Requisitos
+## Simulación
+
+### Requisitos
 
 - [GHDL](http://ghdl.free.fr/)
 
-## Procedimiento
+### Procedimiento
 
 ```bash
 
@@ -21,13 +23,13 @@ ghdl -r --workdir=./work --std=08 tb_problema3 --vcd=./waves/tb_problema3.vcd --
 
 ```
 
-# Formas de onda
+## Formas de onda
 
-## Requisitos
+### Requisitos
 
 - [GTKWave](http://gtkwave.sourceforge.net/)
 
-## Procedimiento
+### Procedimiento
 
 ```bash 
 
@@ -35,7 +37,7 @@ ghdl -r --workdir=./work --std=08 tb_problema3 --vcd=./waves/tb_problema3.vcd --
 gtkwave ./waves/tb_problema3.vcd
 
 ```
-# Makefile
+## Makefile
 
 Este Makefile está diseñado para compilar, simular y generar formas de onda para un diseño VHD. Aquí está una explicación de las diferentes partes del Makefile y su procesamiento:
 
