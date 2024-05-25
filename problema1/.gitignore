@@ -41,7 +41,7 @@
 *.pin
 *.pof
 *.ptf.*
-# *.qar
+*.qar
 *.qarlog
 *.qws
 *.rpt
