@@ -1,52 +1,57 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity tb_problema3 is
-end tb_problema3;
+ENTITY tb_problema3 IS
+END tb_problema3;
 
-architecture a of tb_problema3 is
+ARCHITECTURE a OF tb_problema3 IS
 
-	component problema3 is
-		port(
-			A,B,C,D   :in std_logic;
-			display   :out std_logic_vector (6 downto 0)
+	COMPONENT problema3 IS
+		PORT (
+			A, B, C, D : IN std_logic;
+			display    : OUT std_logic_vector (6 DOWNTO 0)
 		);
-	end component problema3;
+	END COMPONENT problema3;
 
-signal InA, InB, InC, InD : std_logic;
-signal salida : std_logic_vector (6 downto 0);
+	SIGNAL InA, InB, InC, InD : std_logic;
+	SIGNAL salida             : std_logic_vector (6 DOWNTO 0);
 
-begin
+BEGIN
 
-	uut: problema3  port map (InA, InB, InC, InD, salida); -- instancio paridades
-	
-	Process 
-	begin
-		
+	uut : problema3 PORT MAP(InA, InB, InC, InD, salida); -- instancio paridades
+
+	PROCESS
+	BEGIN
+
 		InA <= '1';
 		InB <= '0';
 		InC <= '0';
-		InD <= '1'; wait for 10 ns;
-		
+		InD <= '1';
+		WAIT FOR 10 ns;
+
 		InA <= '0';
 		InB <= '1';
 		InC <= '0';
-		InD <= '1'; wait for 10 ns;
+		InD <= '1';
+		WAIT FOR 10 ns;
 
 		InA <= '1';
 		InB <= '1';
 		InC <= '1';
-		InD <= '0'; wait for 10 ns;
-		
+		InD <= '0';
+		WAIT FOR 10 ns;
+
 		InA <= '1';
 		InB <= '1';
 		InC <= '0';
-		InD <= '0'; wait for 10 ns;
-		
+		InD <= '0';
+		WAIT FOR 10 ns;
+
 		InA <= '1';
 		InB <= '0';
 		InC <= '1';
-		InD <= '0'; wait for 10 ns;
+		InD <= '0';
+		WAIT FOR 10 ns;
 
-	End process;	
-end a;
+	END PROCESS;
+END a;

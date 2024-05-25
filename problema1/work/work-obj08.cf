@@ -1,0 +1,7 @@
+v 4
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema1\" "./src/tb_problema1.vhd" "26a0bd301a71f66cd8b5fe0277d3d67cf2ef4426" "20240513190556.126":
+  entity tb_problema1 at 1( 0) + 0 on 13;
+  architecture a of tb_problema1 at 7( 92) + 0 on 14;
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema1\" "./src/problema1.vhd" "373a96f3b612d6137bd459761d6f6085b367af4f" "20240513190535.494":
+  entity problema1 at 1( 0) + 0 on 11;
+  architecture logic of problema1 at 11( 176) + 0 on 12;

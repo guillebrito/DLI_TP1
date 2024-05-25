@@ -1,35 +1,33 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use ieee.numeric_std.all;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity problema2 is
-    port(
-        clk_50Mhz, rst  :in std_logic;
-        led       		:out std_logic
-    );
-end entity problema2;
+ENTITY problema2 IS
+	PORT (
+		clk_50Mhz, rst : IN std_logic;
+		led            : OUT std_logic
+	);
+END ENTITY problema2;
+ARCHITECTURE logic OF problema2 IS
 
-
-architecture logic of problema2 is 
-
-	component conta is
-		generic	(
+	COMPONENT conta IS
+		GENERIC (
 			MIN_COUNT : natural := 0;
-			MAX_COUNT : natural := 256	);
-	
-		port	(
-			clk		: in std_logic;
-			reset	: in std_logic;
-			enable	: in std_logic;
-			cout	: out std_logic;
-			q		: out integer range MIN_COUNT to MAX_COUNT);
-	end component conta;
-	
-	signal clk_1hz : std_logic;
+			MAX_COUNT : natural := 256);
 
-	begin
-    cnt: conta generic map (0,10) -- 50_000_000 para 1 seg
-        port map(clk_50Mhz, rst, '1', clk_1hz, open);
-    
-    led <= clk_1hz;
-end architecture logic;
+		PORT (
+			clk    : IN std_logic;
+			reset  : IN std_logic;
+			enable : IN std_logic;
+			cout   : OUT std_logic;
+			q      : OUT integer RANGE MIN_COUNT TO MAX_COUNT);
+	END COMPONENT conta;
+
+	SIGNAL clk_1hz : std_logic;
+
+BEGIN
+	cnt : conta GENERIC MAP(0, 50_000_000) -- 50_000_000 para 1 seg
+	PORT MAP(clk_50Mhz, rst, '1', clk_1hz, OPEN);
+
+	led <= clk_1hz;
+END ARCHITECTURE logic;

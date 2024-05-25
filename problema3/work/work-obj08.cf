@@ -1,0 +1,10 @@
+v 4
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema3\" "./src/tb_problema3.vhd" "80880bf7c1f1f7aa142cfae4d53cdd1fb8c2fa9e" "20240513235833.891":
+  entity tb_problema3 at 1( 0) + 0 on 15;
+  architecture a of tb_problema3 at 7( 92) + 0 on 16;
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema3\" "./src/display_7seg.vhd" "3fffa7be928542e75afcf25b03f97c037a6d9469" "20240513235832.226":
+  entity display_7seg at 1( 0) + 0 on 11;
+  architecture solucion of display_7seg at 11( 233) + 0 on 12;
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema3\" "./src/problema3.vhd" "57a4f4fc93adf1f9a37db019e5418c7635b214b5" "20240513235833.145":
+  entity problema3 at 1( 0) + 0 on 13;
+  architecture arquitectura of problema3 at 12( 227) + 0 on 14;

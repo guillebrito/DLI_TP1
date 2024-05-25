@@ -1,36 +1,41 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity conta is
-	generic	(
+ENTITY conta IS
+	GENERIC (
 		MIN_COUNT : natural := 0;
-		MAX_COUNT : natural := 256	);
+		MAX_COUNT : natural := 256);
 
-	port	(
-		clk		  : in std_logic;
-		reset	  : in std_logic;
-		enable	  : in std_logic;
-		cout      : out std_logic;
-		q		  : out integer range MIN_COUNT to MAX_COUNT	);
-end entity;
+	PORT (
+		clk    : IN std_logic;
+		reset  : IN std_logic;
+		enable : IN std_logic;
+		cout   : OUT std_logic;
+		q      : OUT integer RANGE MIN_COUNT TO MAX_COUNT);
+END ENTITY;
 
-architecture rtl of conta is
-begin
-	process (clk)
-		variable   cnt: integer range MIN_COUNT to MAX_COUNT;
-	begin
-		if (rising_edge(clk)) then
-			if reset = '1' then
+ARCHITECTURE rtl OF conta IS
+BEGIN
+	PROCESS (clk)
+		VARIABLE cnt : integer RANGE MIN_COUNT TO MAX_COUNT;
+	BEGIN
+		IF (rising_edge(clk)) THEN
+			IF reset = '1' THEN
 				cnt := 0;
-			elsif enable = '1' then cnt := cnt + 1;
-				if cnt<= max_count/2 then cout<='0';
-				else cout<='1';
-				end iF;
-				if cnt=MAX_COUNT then cnt:=0; end if;
-			end if;
-		end if;
+			ELSIF enable = '1' THEN
+				cnt := cnt + 1;
+				IF cnt <= max_count/2 THEN
+					cout   <= '0';
+				ELSE
+					cout <= '1';
+				END IF;
+				IF cnt = MAX_COUNT THEN
+					cnt := 0;
+				END IF;
+			END IF;
+		END IF;
 		q <= cnt;
 		--if cnt=MAX_COUNT then cnt:=0; end if;
-	end process;
-end rtl;
+	END PROCESS;
+END rtl;

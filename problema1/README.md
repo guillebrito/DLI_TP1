@@ -10,15 +10,10 @@
 
 ```bash
 
-# Design analysis of the sources and testbenches
-ghdl -a --workdir=./work --std=08 ./src/problema1.vhd
-ghdl -a --workdir=./work --std=08 ./src/tb_problema1.vhd
-
-# Test units elaboration
-ghdl -e --workdir=./work --std=08 tb_problema1
-
-# Execute the simulation and export the waveforms
-ghdl -r --workdir=./work --std=08 tb_problema1 --vcd=./waves/tb_problema1.vcd --stop-time=100ns
+ghdl -a --std=08 parcial.vhd
+ghdl -a --std=08 tb_parcial.vhd
+ghdl -e --std=08 tb_parcial
+ghdl -r --std=08 tb_parcial --vcd=tb_parcial.vcd --stop-time=500ns
 
 ```
 
@@ -32,8 +27,8 @@ ghdl -r --workdir=./work --std=08 tb_problema1 --vcd=./waves/tb_problema1.vcd --
 
 ```bash 
 
-# problema1
-gtkwave ./waves/tb_problema1.vcd
+# parcial
+gtkwave ./waves/tb_parcial.vcd
 
 ```
 ## Makefile

@@ -1,29 +1,31 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity tb_problema2 is
-end tb_problema2;
+ENTITY tb_problema2 IS
+END tb_problema2;
 
-architecture a of tb_problema2 is
+ARCHITECTURE a OF tb_problema2 IS
 
-	component problema2 is	  -- declaro componente de paridades.vhdl
-		port(
-			clk_50Mhz,rst  :in std_logic;
-			led       :out std_logic
+	COMPONENT problema2 IS -- declaro componente de paridades.vhdl
+		PORT (
+			clk_50Mhz, rst : IN std_logic;
+			led            : OUT std_logic
 		);
-	end component;
+	END COMPONENT;
 
-	signal clk, reset : std_logic;
-	signal salida : std_logic;
+	SIGNAL clk, reset : std_logic;
+	SIGNAL salida     : std_logic;
 
-	begin
-		uut: problema2  port map (clk, reset, salida); -- instancio paridades
-		
-		Process 
-			begin
-			clk 	<= '1';
-			reset 	<= '0'; wait for 10 ns;
-			clk 	<= '0';
-			reset 	<= '0'; wait for 10 ns;
-		End process;	
-end a;
+BEGIN
+	uut : problema2 PORT MAP(clk, reset, salida); -- instancio paridades
+
+	PROCESS
+	BEGIN
+		clk   <= '1';
+		reset <= '0';
+		WAIT FOR 10 ns;
+		clk   <= '0';
+		reset <= '0';
+		WAIT FOR 10 ns;
+	END PROCESS;
+END a;

@@ -1,0 +1,10 @@
+v 4
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema2\" "./src/tb_problema2.vhd" "1378f033202056ef533e7c0fc1f518194450c973" "20240513192737.841":
+  entity tb_problema2 at 1( 0) + 0 on 27;
+  architecture a of tb_problema2 at 7( 92) + 0 on 28;
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema2\" "./src/conta.vhd" "41dd1255c1fc4c0d2e74079458489f868b5b8274" "20240513192735.714":
+  entity conta at 1( 0) + 0 on 23;
+  architecture rtl of conta at 18( 356) + 0 on 24;
+file "F:\Facultad\Diseno_logico\DLI_TP1\problema2\" "./src/problema2.vhd" "41f126acdb248cbb848a0f4d4608c1d5fb3b4e0d" "20240513192736.773":
+  entity problema2 at 1( 0) + 0 on 25;
+  architecture logic of problema2 at 13( 217) + 0 on 26;
